@@ -8,4 +8,11 @@ class Team
     @coach = coach
     @players = players
   end
+
+  def total_salary
+    players.sum do |player|
+      player.salary
+    end
+  end
+
 end
