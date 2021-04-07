@@ -6,4 +6,8 @@ class League
     @teams = []
   end
 
+  def add_team(team)
+    @teams << team
+  end
+
 end
