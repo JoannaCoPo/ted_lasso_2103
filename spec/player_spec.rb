@@ -5,7 +5,6 @@ require 'pry'
 RSpec.describe Player do
   it 'exists' do
     roy = Player.new({name: "Roy Kent", position: "Center Midfielder", salary: 1_000_000})
-
     expect(roy).to be_instance_of(Player)
   end
 
