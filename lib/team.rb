@@ -15,4 +15,14 @@ class Team
     end
   end
 
+  def captain
+    players.first.name
+  end
+
+  def positions_filled
+    players.map do |player|
+      player.position
+    end
+  end
+
 end

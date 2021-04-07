@@ -27,5 +27,19 @@ RSpec.describe Team do
     expect(richmond.total_salary).to eq(1600000)
   end
 
+  it 'has a captain' do
+    roy = Player.new({name: "Roy Kent", position: "Center Midfielder", salary: 1_000_000})
+    sam = Player.new({name: "Sam Obisanya", position: "Right-back Defender", salary: 600_000})
+    richmond = Team.new("AFC Richmond", "Ted Lasso", [roy, sam])
+    expect(richmond.captain).to eq("Roy Kent")
+  end
+
+  it 'has filled positions' do
+    roy = Player.new({name: "Roy Kent", position: "Center Midfielder", salary: 1_000_000})
+    sam = Player.new({name: "Sam Obisanya", position: "Right-back Defender", salary: 600_000})
+    richmond = Team.new("AFC Richmond", "Ted Lasso", [roy, sam])
+    expect(richmond.positions_filled).to eq(["Center Midfielder", "Right-back Defender"])
+  end
+
 
 end
